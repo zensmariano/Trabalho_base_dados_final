@@ -16,5 +16,32 @@ namespace trabalho_base_dados
         {
             InitializeComponent();
         }
+
+
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pessoalBtn_Click(object sender, EventArgs e)
+        {
+           // this.Hide();
+            Funcionarios clientes = new Funcionarios();
+            clientes.Show();
+        }
+
+        private void producaoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void armazemBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void marketBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

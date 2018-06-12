@@ -28,83 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comprasBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            this.pessoalBtn = new System.Windows.Forms.Button();
+            this.armazemBtn = new System.Windows.Forms.Button();
+            this.marketBtn = new System.Windows.Forms.Button();
+            this.producaoBtn = new System.Windows.Forms.Button();
+            this.nelsadaDataSet1 = new trabalho_base_dados.nelsadaDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // pessoalBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quinta da nelsada";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pessoalBtn.Image = ((System.Drawing.Image)(resources.GetObject("pessoalBtn.Image")));
+            this.pessoalBtn.Location = new System.Drawing.Point(34, 150);
+            this.pessoalBtn.Name = "pessoalBtn";
+            this.pessoalBtn.Size = new System.Drawing.Size(359, 140);
+            this.pessoalBtn.TabIndex = 1;
+            this.pessoalBtn.UseVisualStyleBackColor = true;
+            this.pessoalBtn.Click += new System.EventHandler(this.pessoalBtn_Click);
             // 
-            // comprasBtn
+            // armazemBtn
             // 
-            this.comprasBtn.Location = new System.Drawing.Point(34, 150);
-            this.comprasBtn.Name = "comprasBtn";
-            this.comprasBtn.Size = new System.Drawing.Size(359, 140);
-            this.comprasBtn.TabIndex = 1;
-            this.comprasBtn.Text = "PESSOAL";
-            this.comprasBtn.UseVisualStyleBackColor = true;
+            this.armazemBtn.Image = ((System.Drawing.Image)(resources.GetObject("armazemBtn.Image")));
+            this.armazemBtn.Location = new System.Drawing.Point(34, 296);
+            this.armazemBtn.Name = "armazemBtn";
+            this.armazemBtn.Size = new System.Drawing.Size(359, 140);
+            this.armazemBtn.TabIndex = 2;
+            this.armazemBtn.UseVisualStyleBackColor = true;
+            this.armazemBtn.Click += new System.EventHandler(this.armazemBtn_Click);
             // 
-            // button2
+            // marketBtn
             // 
-            this.button2.Location = new System.Drawing.Point(34, 296);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(359, 140);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.marketBtn.Image = ((System.Drawing.Image)(resources.GetObject("marketBtn.Image")));
+            this.marketBtn.Location = new System.Drawing.Point(399, 296);
+            this.marketBtn.Name = "marketBtn";
+            this.marketBtn.Size = new System.Drawing.Size(359, 140);
+            this.marketBtn.TabIndex = 4;
+            this.marketBtn.UseVisualStyleBackColor = true;
+            this.marketBtn.Click += new System.EventHandler(this.marketBtn_Click);
             // 
-            // button3
+            // producaoBtn
             // 
-            this.button3.Location = new System.Drawing.Point(399, 296);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(359, 140);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "COMPRAS/VENDAS";
-            this.button3.UseVisualStyleBackColor = true;
+            this.producaoBtn.Image = ((System.Drawing.Image)(resources.GetObject("producaoBtn.Image")));
+            this.producaoBtn.Location = new System.Drawing.Point(399, 150);
+            this.producaoBtn.Name = "producaoBtn";
+            this.producaoBtn.Size = new System.Drawing.Size(359, 140);
+            this.producaoBtn.TabIndex = 3;
+            this.producaoBtn.UseVisualStyleBackColor = true;
+            this.producaoBtn.Click += new System.EventHandler(this.producaoBtn_Click);
             // 
-            // button4
+            // nelsadaDataSet1
             // 
-            this.button4.Location = new System.Drawing.Point(399, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(359, 140);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.nelsadaDataSet1.DataSetName = "nelsadaDataSet";
+            this.nelsadaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comprasBtn);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.marketBtn);
+            this.Controls.Add(this.producaoBtn);
+            this.Controls.Add(this.armazemBtn);
+            this.Controls.Add(this.pessoalBtn);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button comprasBtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button pessoalBtn;
+        private System.Windows.Forms.Button armazemBtn;
+        private System.Windows.Forms.Button marketBtn;
+        private System.Windows.Forms.Button producaoBtn;
+        private nelsadaDataSet nelsadaDataSet1;
     }
 }
