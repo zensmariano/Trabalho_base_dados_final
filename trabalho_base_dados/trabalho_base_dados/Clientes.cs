@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace trabalho_base_dados
 {
-    public partial class Clientes : Form
+    public partial class Pessoal : Form
     {
-        public Clientes()
+        public Pessoal()
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace trabalho_base_dados
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button21_Click(object sender, EventArgs e)
         {
 
         }
