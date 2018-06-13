@@ -46,46 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Armazem.cs">
+    <Compile Include="Views\Armazem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Armazem.Designer.cs">
+    <Compile Include="Views\Armazem.Designer.cs">
       <DependentUpon>Armazem.cs</DependentUpon>
     </Compile>
-    <Compile Include="CartaoCliente.cs">
+    <Compile Include="Views\CartaoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CartaoCliente.Designer.cs">
+    <Compile Include="Views\CartaoCliente.Designer.cs">
       <DependentUpon>CartaoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Producao.cs">
+    <Compile Include="Views\Producao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Producao.Designer.cs">
+    <Compile Include="Views\Producao.Designer.cs">
       <DependentUpon>Producao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.cs">
+    <Compile Include="Views\Pessoal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="Views\Pessoal.Designer.cs">
+      <DependentUpon>Pessoal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Funcionarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Funcionarios.Designer.cs">
+    <Compile Include="Views\Funcionarios.Designer.cs">
       <DependentUpon>Funcionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Views\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Views\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="nelsadaDataSet.Designer.cs">
@@ -95,22 +89,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Armazem.resx">
+    <EmbeddedResource Include="Views\Armazem.resx">
       <DependentUpon>Armazem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CartaoCliente.resx">
+    <EmbeddedResource Include="Views\CartaoCliente.resx">
       <DependentUpon>CartaoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Producao.resx">
+    <EmbeddedResource Include="Views\Producao.resx">
       <DependentUpon>Producao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Pessoal.resx">
+      <DependentUpon>Pessoal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionarios.resx">
+    <EmbeddedResource Include="Views\Funcionarios.resx">
       <DependentUpon>Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Views\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -146,7 +140,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="images\armazem.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
