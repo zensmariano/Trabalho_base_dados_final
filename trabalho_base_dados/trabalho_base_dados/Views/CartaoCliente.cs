@@ -16,5 +16,20 @@ namespace trabalho_base_dados
         {
             InitializeComponent();
         }
+
+        private void cartao_de_ClienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cartao_de_ClienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.nelsadaDataSet);
+
+        }
+
+        private void CartaoCliente_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'nelsadaDataSet.Cartao_de_Cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.cartao_de_ClienteTableAdapter.Fill(this.nelsadaDataSet.Cartao_de_Cliente);
+
+        }
     }
 }
