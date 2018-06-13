@@ -72,7 +72,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
+            this.VerCliBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.FornecedoresTab = new System.Windows.Forms.TabPage();
@@ -232,7 +232,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(617, 354);
+            this.button1.Location = new System.Drawing.Point(617, 384);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 28);
@@ -253,13 +253,14 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(617, 385);
+            this.button3.Location = new System.Drawing.Point(617, 353);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(188, 28);
             this.button3.TabIndex = 17;
-            this.button3.Text = "Cartao Cliente";
+            this.button3.Text = "Ver";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -268,7 +269,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 28);
             this.button4.TabIndex = 18;
-            this.button4.Text = "Eleminar";
+            this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -377,7 +378,7 @@
             this.FuncionariosTab.Controls.Add(this.label7);
             this.FuncionariosTab.Controls.Add(this.button11);
             this.FuncionariosTab.Controls.Add(this.textBox9);
-            this.FuncionariosTab.Controls.Add(this.button12);
+            this.FuncionariosTab.Controls.Add(this.VerCliBtn);
             this.FuncionariosTab.Controls.Add(this.label8);
             this.FuncionariosTab.Controls.Add(this.textBox10);
             this.FuncionariosTab.Location = new System.Drawing.Point(4, 25);
@@ -520,15 +521,15 @@
             this.textBox9.Size = new System.Drawing.Size(403, 22);
             this.textBox9.TabIndex = 29;
             // 
-            // button12
+            // VerCliBtn
             // 
-            this.button12.Location = new System.Drawing.Point(617, 362);
-            this.button12.Margin = new System.Windows.Forms.Padding(4);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(188, 28);
-            this.button12.TabIndex = 32;
-            this.button12.Text = "Adicionar";
-            this.button12.UseVisualStyleBackColor = true;
+            this.VerCliBtn.Location = new System.Drawing.Point(617, 362);
+            this.VerCliBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.VerCliBtn.Name = "VerCliBtn";
+            this.VerCliBtn.Size = new System.Drawing.Size(188, 28);
+            this.VerCliBtn.TabIndex = 32;
+            this.VerCliBtn.Text = "Adicionar";
+            this.VerCliBtn.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -805,7 +806,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button VerCliBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TabPage FornecedoresTab;
