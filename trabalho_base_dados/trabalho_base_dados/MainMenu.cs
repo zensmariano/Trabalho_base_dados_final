@@ -27,8 +27,8 @@ namespace trabalho_base_dados
         private void pessoalBtn_Click(object sender, EventArgs e)
         {
             // this.Hide();
-            Funcionarios clientes = new Funcionarios();
-            clientes.Show();
+            Pessoal pessoas = new Pessoal();
+            pessoas.Show();
             
         }
 
