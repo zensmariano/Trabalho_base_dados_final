@@ -26,18 +26,22 @@ namespace trabalho_base_dados
 
         private void pessoalBtn_Click(object sender, EventArgs e)
         {
-           // this.Hide();
+            // this.Hide();
             Funcionarios clientes = new Funcionarios();
             clientes.Show();
+            
         }
 
         private void producaoBtn_Click(object sender, EventArgs e)
         {
-
+            // this.Hide();
+            Producao vinho = new Producao();
+            vinho.Show();
         }
         private void armazemBtn_Click(object sender, EventArgs e)
         {
-
+            Armazem armazem = new Armazem();
+            armazem.Show();
         }
         private void marketBtn_Click(object sender, EventArgs e)
         {

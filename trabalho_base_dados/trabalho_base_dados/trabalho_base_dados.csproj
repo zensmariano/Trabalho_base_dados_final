@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Armazem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Armazem.Designer.cs">
+      <DependentUpon>Armazem.cs</DependentUpon>
+    </Compile>
     <Compile Include="CartaoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CartaoCliente.Designer.cs">
       <DependentUpon>CartaoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Producao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producao.Designer.cs">
+      <DependentUpon>Producao.cs</DependentUpon>
     </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
@@ -83,8 +95,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Armazem.resx">
+      <DependentUpon>Armazem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CartaoCliente.resx">
       <DependentUpon>CartaoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producao.resx">
+      <DependentUpon>Producao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>

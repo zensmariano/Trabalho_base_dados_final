@@ -38,5 +38,10 @@ namespace trabalho_base_dados
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
