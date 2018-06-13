@@ -14,12 +14,12 @@ namespace trabalho_base_dados
 {
     public partial class Pessoal : Form
     {
-        List<Cliente> clientes = new List<Cliente>();
+        List<ClienteMoradaContacto> clientes = new List<ClienteMoradaContacto>();
         ClienteController cc = new ClienteController();
         public Pessoal()
         {
             InitializeComponent();
-            clientes = cc.GetClientes();
+            //clientes = cc.GetClientes();
             UpdateBindingCliente();
         }
         public void UpdateBindingCliente()
@@ -49,10 +49,10 @@ namespace trabalho_base_dados
         private void addBtn_Click(object sender, EventArgs e)
         {
             
-            clientes = cc.AddClient(
-                NomeTxtBox.Text,
-                Int32.Parse(NifTxtBox.Text),
-                DateTime.Now.Date);
+            //clientes = cc.AddClient(
+            //    NomeTxtBox.Text,
+            //    Int32.Parse(NifTxtBox.Text),
+            //    DateTime.Now.Date);
             //clientes = 
             UpdateBindingCliente();
         }
@@ -61,9 +61,10 @@ namespace trabalho_base_dados
         {
             ClienteController cc = new ClienteController();
 
-            clientes = cc.GetClientes();
-
-            UpdateBindingCliente();
+            //clientes = cc.GetClientes();
+            clientes = cc.GetClientesTotal();
+            ClienteDataGridView.DataSource = clientes;
+            ClienteDataGridView.DataBind
 
         }
 
@@ -77,11 +78,15 @@ namespace trabalho_base_dados
                 {
                     int id;
                     int.TryParse(cell.Value.ToString(), out id);
-                    clientes = cc.DeleteCliente(id);
+                    //clientes = cc.DeleteCliente(id);
                 }
             }
             UpdateBindingCliente();
         }
 
+        private void ClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

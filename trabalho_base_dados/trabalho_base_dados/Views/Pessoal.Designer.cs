@@ -34,6 +34,7 @@
             this.cLIENTEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLIENTENOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLIENTENIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nelsadaDataSet = new trabalho_base_dados.nelsadaDataSet();
@@ -116,6 +117,7 @@
             this.ClienteDataGridView.Name = "ClienteDataGridView";
             this.ClienteDataGridView.Size = new System.Drawing.Size(750, 235);
             this.ClienteDataGridView.TabIndex = 0;
+            this.ClienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClienteDataGridView_CellContentClick);
             // 
             // cLIENTEIDDataGridViewTextBoxColumn
             // 
