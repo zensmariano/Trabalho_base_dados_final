@@ -7,28 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using trabalho_base_dados.Model;
+using trabalho_base_dados.Controller;
 
 namespace trabalho_base_dados
 {
     public partial class Pessoal : Form
     {
+        List<Cliente> clientes = new List<Cliente>();
+        ClienteController cc = new ClienteController();
         public Pessoal()
         {
             InitializeComponent();
+            clientes = cc.GetClientes();
+            UpdateBindingCliente();
         }
-
-        private void Clientes_Load(object sender, EventArgs e)
+        public void UpdateBindingCliente()
         {
-            // TODO: esta linha de código carrega dados na tabela 'nelsadaDataSet.Cliente'. Você pode movê-la ou removê-la conforme necessário.
-            //this.clienteTableAdapter.Fill(this.nelsadaDataSet.Cliente);
-
+            ClienteDataGridView.DataSource = clientes;
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -39,19 +41,47 @@ namespace trabalho_base_dados
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void NometxtBox_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        // adicionar
+        private void addBtn_Click(object sender, EventArgs e)
         {
+            
+            clientes = cc.AddClient(
+                NomeTxtBox.Text,
+                Int32.Parse(NifTxtBox.Text),
+                DateTime.Now.Date);
+            //clientes = 
+            UpdateBindingCliente();
+        }
+        // ver
+        private void verBtn_Click(object sender, EventArgs e)
+        {
+            ClienteController cc = new ClienteController();
+
+            clientes = cc.GetClientes();
+
+            UpdateBindingCliente();
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void ElmBtn_Click(object sender, EventArgs e)
         {
-
+            ClienteController cc = new ClienteController();
+            //clientes = cc.DeleteCliente();   
+            foreach (DataGridViewCell cell in ClienteDataGridView.SelectedCells)
+            {
+                if (cell.OwningColumn.HeaderText.ToUpper() == "CLIENTE_ID")
+                {
+                    int id;
+                    int.TryParse(cell.Value.ToString(), out id);
+                    clientes = cc.DeleteCliente(id);
+                }
+            }
+            UpdateBindingCliente();
         }
+
     }
 }
