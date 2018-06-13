@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace trabalho_base_dados
+namespace trabalho_base_dados.Views
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        private Panel panel;
+
+        public Home()
         {
             InitializeComponent();
+            Panel = panel1;
+            Panel.Controls.Add(new UserControl1());
         }
+
+        public Panel Panel { get => panel; set => panel = value; }
     }
 }
