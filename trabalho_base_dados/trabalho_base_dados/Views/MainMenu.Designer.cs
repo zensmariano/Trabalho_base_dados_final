@@ -92,9 +92,10 @@
             this.Controls.Add(this.producaoBtn);
             this.Controls.Add(this.armazemBtn);
             this.Controls.Add(this.pessoalBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainMenu";
+            this.Text = "Quinta da Nelsada";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet1)).EndInit();
             this.ResumeLayout(false);

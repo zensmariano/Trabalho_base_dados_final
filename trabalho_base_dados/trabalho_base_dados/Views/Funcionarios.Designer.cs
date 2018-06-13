@@ -159,7 +159,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.funcionarioDataGridView.DataSource = this.funcionarioBindingSource;
-            this.funcionarioDataGridView.Location = new System.Drawing.Point(12, 87);
+            this.funcionarioDataGridView.Location = new System.Drawing.Point(12, 84);
             this.funcionarioDataGridView.Name = "funcionarioDataGridView";
             this.funcionarioDataGridView.Size = new System.Drawing.Size(776, 220);
             this.funcionarioDataGridView.TabIndex = 1;

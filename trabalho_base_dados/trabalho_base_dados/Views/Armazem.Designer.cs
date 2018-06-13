@@ -28,6 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Armazem));
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.aRMAZEMSTOCK_IDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aRMAZEMIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +39,6 @@
             this.aRMAZEMPRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.armazemTableAdapter = new trabalho_base_dados.nelsadaDataSetTableAdapters.Produto_em_ArmazenamentoTableAdapter();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,6 +53,9 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.button21 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armazemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet)).BeginInit();
@@ -120,104 +123,86 @@
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(249, 363);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox16.Location = new System.Drawing.Point(203, 351);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(87, 22);
+            this.textBox16.Size = new System.Drawing.Size(66, 20);
             this.textBox16.TabIndex = 55;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(112, 330);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(365, 22);
-            this.textBox19.TabIndex = 46;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(196, 365);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(163, 353);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 17);
+            this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 54;
             this.label14.Text = "Preço";
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(112, 362);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox20.Location = new System.Drawing.Point(100, 350);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(73, 22);
+            this.textBox20.Size = new System.Drawing.Size(56, 20);
             this.textBox20.TabIndex = 48;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 265);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(32, 271);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 17);
+            this.label15.Size = new System.Drawing.Size(52, 13);
             this.label15.TabIndex = 41;
             this.label15.Text = "Stock_ID";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 366);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(26, 353);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 17);
+            this.label18.Size = new System.Drawing.Size(62, 13);
             this.label18.TabIndex = 47;
             this.label18.Text = "Quantidade";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(22, 301);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(32, 301);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(79, 17);
+            this.label16.Size = new System.Drawing.Size(61, 13);
             this.label16.TabIndex = 42;
             this.label16.Text = "Produto_ID";
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(609, 299);
-            this.button23.Margin = new System.Windows.Forms.Padding(4);
+            this.button23.Location = new System.Drawing.Point(473, 299);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(150, 28);
+            this.button23.Size = new System.Drawing.Size(112, 23);
             this.button23.TabIndex = 49;
             this.button23.Text = "Adicionar";
             this.button23.UseVisualStyleBackColor = true;
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(805, 360);
-            this.button19.Margin = new System.Windows.Forms.Padding(4);
+            this.button19.Location = new System.Drawing.Point(620, 348);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(150, 28);
+            this.button19.Size = new System.Drawing.Size(112, 23);
             this.button19.TabIndex = 53;
             this.button19.Text = "Retroceder";
             this.button19.UseVisualStyleBackColor = true;
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(805, 298);
-            this.button22.Margin = new System.Windows.Forms.Padding(4);
+            this.button22.Location = new System.Drawing.Point(620, 298);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(150, 28);
+            this.button22.Size = new System.Drawing.Size(112, 23);
             this.button22.TabIndex = 50;
             this.button22.Text = "Alterar";
             this.button22.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(609, 362);
-            this.button20.Margin = new System.Windows.Forms.Padding(4);
+            this.button20.Location = new System.Drawing.Point(473, 350);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(150, 28);
+            this.button20.Size = new System.Drawing.Size(112, 23);
             this.button20.TabIndex = 52;
             this.button20.Text = "Cancelar";
             this.button20.UseVisualStyleBackColor = true;
@@ -225,34 +210,32 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(14, 335);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(26, 328);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(88, 17);
+            this.label17.Size = new System.Drawing.Size(67, 13);
             this.label17.TabIndex = 45;
             this.label17.Text = "Armazem_ID";
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(112, 265);
+            this.textBox17.Location = new System.Drawing.Point(100, 271);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(365, 22);
+            this.textBox17.Size = new System.Drawing.Size(275, 20);
             this.textBox17.TabIndex = 58;
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(112, 298);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox18.Location = new System.Drawing.Point(100, 298);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(365, 22);
+            this.textBox18.Size = new System.Drawing.Size(275, 20);
             this.textBox18.TabIndex = 44;
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(805, 330);
-            this.button21.Margin = new System.Windows.Forms.Padding(4);
+            this.button21.Location = new System.Drawing.Point(620, 324);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(150, 28);
+            this.button21.Size = new System.Drawing.Size(112, 23);
             this.button21.TabIndex = 51;
             this.button21.Text = "Eleminar";
             this.button21.UseVisualStyleBackColor = true;
@@ -260,8 +243,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBox16);
-            this.panel2.Controls.Add(this.textBox19);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.textBox20);
             this.panel2.Controls.Add(this.label15);
@@ -275,18 +260,45 @@
             this.panel2.Controls.Add(this.textBox17);
             this.panel2.Controls.Add(this.textBox18);
             this.panel2.Controls.Add(this.button21);
-            this.panel2.Location = new System.Drawing.Point(41, 73);
+            this.panel2.Location = new System.Drawing.Point(11, 66);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(972, 393);
+            this.panel2.Size = new System.Drawing.Size(798, 383);
             this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 246);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Tipo de produto";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(140, 243);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(235, 21);
+            this.comboBox1.TabIndex = 60;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(100, 320);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(122, 21);
+            this.comboBox2.TabIndex = 61;
             // 
             // Armazem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 566);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(820, 460);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Armazem";
             this.Text = "Armazem";
             this.Load += new System.EventHandler(this.Armazem_Load);
@@ -312,7 +324,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aRMAZEMPRECODataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.Label label15;
@@ -326,5 +337,8 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

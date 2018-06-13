@@ -19,6 +19,10 @@ namespace trabalho_base_dados
 
         private void Clientes_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'nelsadaDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter.Fill(this.nelsadaDataSet.Fornecedor);
+            // TODO: esta linha de código carrega dados na tabela 'nelsadaDataSet.Funcionario'. Você pode movê-la ou removê-la conforme necessário.
+            this.funcionarioTableAdapter.Fill(this.nelsadaDataSet.Funcionario);
             // TODO: esta linha de código carrega dados na tabela 'nelsadaDataSet.Cliente'. Você pode movê-la ou removê-la conforme necessário.
             //this.clienteTableAdapter.Fill(this.nelsadaDataSet.Cliente);
 
