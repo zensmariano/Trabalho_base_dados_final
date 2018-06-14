@@ -14,7 +14,7 @@ namespace trabalho_base_dados
 {
     public partial class Pessoal : Form
     {
-        List<ClienteMoradaContacto> clientes = new List<ClienteMoradaContacto>();
+        List<Cliente> clientes = new List<Cliente>();
         ClienteController cc = new ClienteController();
         public Pessoal()
         {
@@ -49,11 +49,10 @@ namespace trabalho_base_dados
         private void addBtn_Click(object sender, EventArgs e)
         {
             
-            //clientes = cc.AddClient(
-            //    NomeTxtBox.Text,
-            //    Int32.Parse(NifTxtBox.Text),
-            //    DateTime.Now.Date);
-            //clientes = 
+            clientes = cc.AddClient(
+                NomeTxtBox.Text,
+                Int32.Parse(NifTxtBox.Text),
+                DateTime.Now.Date);
             UpdateBindingCliente();
         }
         // ver
@@ -62,10 +61,9 @@ namespace trabalho_base_dados
             ClienteController cc = new ClienteController();
 
             //clientes = cc.GetClientes();
-            clientes = cc.GetClientesTotal();
+            clientes = cc.GetClientes();
             ClienteDataGridView.DataSource = clientes;
-            ClienteDataGridView.DataBind
-
+            ClienteDataGridView.Refresh();
         }
 
         private void ElmBtn_Click(object sender, EventArgs e)
@@ -78,7 +76,7 @@ namespace trabalho_base_dados
                 {
                     int id;
                     int.TryParse(cell.Value.ToString(), out id);
-                    //clientes = cc.DeleteCliente(id);
+                    clientes = cc.DeleteCliente(id);
                 }
             }
             UpdateBindingCliente();
