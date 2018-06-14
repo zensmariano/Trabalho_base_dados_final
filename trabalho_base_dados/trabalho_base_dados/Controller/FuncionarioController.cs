@@ -51,7 +51,7 @@ namespace trabalho_base_dados.Controller
             }
         }
         // Adiciona um cliente e actualiza a tabela
-        public List<Funcionario> AddFuncionario(string nome, int nif, DateTime data)
+        public List<Funcionario> AddFuncionarios(string nome, int nif, DateTime data)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace trabalho_base_dados.Controller
                 return null;
             }
         }
-        public List<Funcionario> DeleteFuncionario(int id)
+        public List<Funcionario> DeleteFuncionarios(int id)
         {
             try
             {
