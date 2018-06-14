@@ -30,25 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pessoal));
-            this.ClienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.cLIENTEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTENOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTENIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nelsadaDataSet = new trabalho_base_dados.nelsadaDataSet();
             this.clienteTableAdapter = new trabalho_base_dados.nelsadaDataSetTableAdapters.ClienteTableAdapter();
             this.NomeTxtBox = new System.Windows.Forms.TextBox();
             this.NifTxtBox = new System.Windows.Forms.TextBox();
-            this.MoradaTxtBox = new System.Windows.Forms.TextBox();
-            this.CPTxtBox = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.AltBtn = new System.Windows.Forms.Button();
             this.verBtn = new System.Windows.Forms.Button();
             this.ElmBtn = new System.Windows.Forms.Button();
-            this.TlfTxtBox = new System.Windows.Forms.TextBox();
             this.tabFuncionario = new System.Windows.Forms.TabControl();
             this.ClientesTab = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ClienteDataGridView = new System.Windows.Forms.DataGridView();
             this.FuncionariosTab = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,55 +80,14 @@
             this.button18 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet)).BeginInit();
             this.tabFuncionario.SuspendLayout();
             this.ClientesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteDataGridView)).BeginInit();
             this.FuncionariosTab.SuspendLayout();
             this.FornecedoresTab.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ClienteDataGridView
-            // 
-            this.ClienteDataGridView.AutoGenerateColumns = false;
-            this.ClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cLIENTEIDDataGridViewTextBoxColumn,
-            this.cLIENTENOMEDataGridViewTextBoxColumn,
-            this.cLIENTENIFDataGridViewTextBoxColumn,
-            this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn});
-            this.ClienteDataGridView.DataSource = this.clienteBindingSource;
-            this.ClienteDataGridView.Location = new System.Drawing.Point(8, 6);
-            this.ClienteDataGridView.Name = "ClienteDataGridView";
-            this.ClienteDataGridView.Size = new System.Drawing.Size(750, 235);
-            this.ClienteDataGridView.TabIndex = 0;
-            this.ClienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClienteDataGridView_CellContentClick);
-            // 
-            // cLIENTEIDDataGridViewTextBoxColumn
-            // 
-            this.cLIENTEIDDataGridViewTextBoxColumn.DataPropertyName = "CLIENTE_ID";
-            this.cLIENTEIDDataGridViewTextBoxColumn.HeaderText = "CLIENTE_ID";
-            this.cLIENTEIDDataGridViewTextBoxColumn.Name = "cLIENTEIDDataGridViewTextBoxColumn";
-            this.cLIENTEIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cLIENTENOMEDataGridViewTextBoxColumn
-            // 
-            this.cLIENTENOMEDataGridViewTextBoxColumn.DataPropertyName = "CLIENTE_NOME";
-            this.cLIENTENOMEDataGridViewTextBoxColumn.HeaderText = "CLIENTE_NOME";
-            this.cLIENTENOMEDataGridViewTextBoxColumn.Name = "cLIENTENOMEDataGridViewTextBoxColumn";
-            // 
-            // cLIENTENIFDataGridViewTextBoxColumn
-            // 
-            this.cLIENTENIFDataGridViewTextBoxColumn.DataPropertyName = "CLIENTE_NIF";
-            this.cLIENTENIFDataGridViewTextBoxColumn.HeaderText = "CLIENTE_NIF";
-            this.cLIENTENIFDataGridViewTextBoxColumn.Name = "cLIENTENIFDataGridViewTextBoxColumn";
-            // 
-            // cLIENTEDATA1CONTACTODataGridViewTextBoxColumn
-            // 
-            this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn.DataPropertyName = "CLIENTE_DATA_1_CONTACTO";
-            this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn.HeaderText = "CLIENTE_DATA_1_CONTACTO";
-            this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn.Name = "cLIENTEDATA1CONTACTODataGridViewTextBoxColumn";
             // 
             // clienteBindingSource
             // 
@@ -163,20 +117,6 @@
             this.NifTxtBox.Name = "NifTxtBox";
             this.NifTxtBox.Size = new System.Drawing.Size(303, 20);
             this.NifTxtBox.TabIndex = 8;
-            // 
-            // MoradaTxtBox
-            // 
-            this.MoradaTxtBox.Location = new System.Drawing.Point(90, 313);
-            this.MoradaTxtBox.Name = "MoradaTxtBox";
-            this.MoradaTxtBox.Size = new System.Drawing.Size(303, 20);
-            this.MoradaTxtBox.TabIndex = 12;
-            // 
-            // CPTxtBox
-            // 
-            this.CPTxtBox.Location = new System.Drawing.Point(90, 339);
-            this.CPTxtBox.Name = "CPTxtBox";
-            this.CPTxtBox.Size = new System.Drawing.Size(109, 20);
-            this.CPTxtBox.TabIndex = 14;
             // 
             // addBtn
             // 
@@ -218,19 +158,12 @@
             this.ElmBtn.UseVisualStyleBackColor = true;
             this.ElmBtn.Click += new System.EventHandler(this.ElmBtn_Click);
             // 
-            // TlfTxtBox
-            // 
-            this.TlfTxtBox.Location = new System.Drawing.Point(272, 338);
-            this.TlfTxtBox.Name = "TlfTxtBox";
-            this.TlfTxtBox.Size = new System.Drawing.Size(121, 20);
-            this.TlfTxtBox.TabIndex = 23;
-            // 
             // tabFuncionario
             // 
             this.tabFuncionario.Controls.Add(this.ClientesTab);
             this.tabFuncionario.Controls.Add(this.FuncionariosTab);
             this.tabFuncionario.Controls.Add(this.FornecedoresTab);
-            this.tabFuncionario.Location = new System.Drawing.Point(20, 1);
+            this.tabFuncionario.Location = new System.Drawing.Point(23, 59);
             this.tabFuncionario.Name = "tabFuncionario";
             this.tabFuncionario.SelectedIndex = 0;
             this.tabFuncionario.Size = new System.Drawing.Size(772, 400);
@@ -239,22 +172,47 @@
             // ClientesTab
             // 
             this.ClientesTab.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientesTab.Controls.Add(this.label5);
+            this.ClientesTab.Controls.Add(this.label2);
             this.ClientesTab.Controls.Add(this.ClienteDataGridView);
-            this.ClientesTab.Controls.Add(this.TlfTxtBox);
             this.ClientesTab.Controls.Add(this.NomeTxtBox);
             this.ClientesTab.Controls.Add(this.ElmBtn);
             this.ClientesTab.Controls.Add(this.NifTxtBox);
             this.ClientesTab.Controls.Add(this.verBtn);
             this.ClientesTab.Controls.Add(this.AltBtn);
-            this.ClientesTab.Controls.Add(this.MoradaTxtBox);
             this.ClientesTab.Controls.Add(this.addBtn);
-            this.ClientesTab.Controls.Add(this.CPTxtBox);
             this.ClientesTab.Location = new System.Drawing.Point(4, 22);
             this.ClientesTab.Name = "ClientesTab";
             this.ClientesTab.Padding = new System.Windows.Forms.Padding(3);
             this.ClientesTab.Size = new System.Drawing.Size(764, 374);
             this.ClientesTab.TabIndex = 0;
             this.ClientesTab.Text = "Clientes";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 287);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "NIF";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Nome";
+            // 
+            // ClienteDataGridView
+            // 
+            this.ClienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClienteDataGridView.Location = new System.Drawing.Point(3, 18);
+            this.ClienteDataGridView.Name = "ClienteDataGridView";
+            this.ClienteDataGridView.Size = new System.Drawing.Size(744, 203);
+            this.ClienteDataGridView.TabIndex = 24;
             // 
             // FuncionariosTab
             // 
@@ -353,13 +311,10 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(610, 319);
+            this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 23);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "Eleminar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 41;
             // 
             // textBox8
             // 
@@ -524,13 +479,10 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(609, 319);
+            this.button15.Location = new System.Drawing.Point(0, 0);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(141, 23);
-            this.button15.TabIndex = 51;
-            this.button15.Text = "Eleminar";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 58;
             // 
             // textBox13
             // 
@@ -607,12 +559,12 @@
             this.Controls.Add(this.tabFuncionario);
             this.Name = "Pessoal";
             this.Text = "Pessoal";
-            ((System.ComponentModel.ISupportInitialize)(this.ClienteDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nelsadaDataSet)).EndInit();
             this.tabFuncionario.ResumeLayout(false);
             this.ClientesTab.ResumeLayout(false);
             this.ClientesTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteDataGridView)).EndInit();
             this.FuncionariosTab.ResumeLayout(false);
             this.FuncionariosTab.PerformLayout();
             this.FornecedoresTab.ResumeLayout(false);
@@ -622,24 +574,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView ClienteDataGridView;
         private nelsadaDataSet nelsadaDataSet;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private nelsadaDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTEIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTENOMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTENIFDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTEDATA1CONTACTODataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox NomeTxtBox;
         private System.Windows.Forms.TextBox NifTxtBox;
-        private System.Windows.Forms.TextBox MoradaTxtBox;
-        private System.Windows.Forms.TextBox CPTxtBox;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button AltBtn;
         private System.Windows.Forms.Button verBtn;
         private System.Windows.Forms.Button ElmBtn;
-        private System.Windows.Forms.TextBox TlfTxtBox;
         private System.Windows.Forms.TabControl tabFuncionario;
         private System.Windows.Forms.TabPage ClientesTab;
         private System.Windows.Forms.TabPage FuncionariosTab;
@@ -678,5 +621,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView ClienteDataGridView;
     }
 }

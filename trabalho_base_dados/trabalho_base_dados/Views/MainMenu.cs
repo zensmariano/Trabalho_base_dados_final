@@ -37,22 +37,5 @@ namespace trabalho_base_dados
             this.Close();
 
         }
-
-        private void producaoBtn_Click(object sender, EventArgs e)
-        {
-            // this.Hide();
-            Producao vinho = new Producao();
-            vinho.Show();
-        }
-        private void armazemBtn_Click(object sender, EventArgs e)
-        {
-            Armazem armazem = new Armazem();
-            armazem.Show();
-            this.Close();
-        }
-        private void marketBtn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

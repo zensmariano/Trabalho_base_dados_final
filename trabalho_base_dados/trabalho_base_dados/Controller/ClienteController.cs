@@ -34,14 +34,14 @@ namespace trabalho_base_dados.Controller
             }
         }
         // todos os clientes 3 tabelas
-        public List<ClienteMoradaContacto> GetClientesTotal()
+        public List<Cliente> GetClientesTotal()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("QuintaDaNelsada")))
             {
                 try
                 {
                     //var output = connection.Query<Cliente>("select * from Cliente").ToList();
-                    var output = connection.Query<ClienteMoradaContacto>($"dbo.InfoCompletaCliente").ToList();
+                    var output = connection.Query<Cliente>($"dbo.InfoCompletaCliente").ToList();
                     return output;
                 }
                 catch (Exception ex)
@@ -75,6 +75,7 @@ namespace trabalho_base_dados.Controller
                 return null;
             }
         }
+        // Deleta um cliente
         public List<Cliente> DeleteCliente(int id)
         {
             try
@@ -88,6 +89,54 @@ namespace trabalho_base_dados.Controller
                         }
                         ).ToList();
                     output = connection.Query<Cliente>("dbo.VerTodosClientes").ToList();
+                    return output;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro a Inserir");
+            }
+            return null;
+        }
+        // Altera um cliente
+        public List<Cliente> AlterarCliente(int id,string nome, int nif)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("QuintaDaNelsada")))
+                {
+                    var output = connection.Query<Cliente>($"dbo.ActualizarCliente @CLIENTE_ID, @CLIENTE_NOME, @CLIENTE_NIF",
+                        new
+                        {
+                            CLIENTE_ID = id,
+                            CLIENTE_NOME = nome,
+                            CLIENTE_NIF = nif
+                        }
+                        ).ToList();
+                    return output;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro a Inserir");
+            }
+            return null;
+        }
+        // cria uma morada pra um cliente
+        public List<Cliente> CriarMorada(int clienteID, string rua, int cp)
+        {
+            try
+            {
+                using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("QuintaDaNelsada")))
+                {
+                    var output = connection.Query<Cliente>($"dbo.CriarMoradaCliente @CC_ID,@CLIENTE_ID,@RUA",
+                        new
+                        {
+                            CLIENTE_ID = clienteID,
+                            CC_ID = cp,
+                            RUA = rua   
+                        }
+                        ).ToList();
                     return output;
                 }
             }

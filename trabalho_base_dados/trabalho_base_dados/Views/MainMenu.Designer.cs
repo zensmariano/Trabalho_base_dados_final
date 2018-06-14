@@ -55,7 +55,6 @@
             this.armazemBtn.Size = new System.Drawing.Size(359, 140);
             this.armazemBtn.TabIndex = 2;
             this.armazemBtn.UseVisualStyleBackColor = true;
-            this.armazemBtn.Click += new System.EventHandler(this.armazemBtn_Click);
             // 
             // marketBtn
             // 
@@ -65,7 +64,6 @@
             this.marketBtn.Size = new System.Drawing.Size(359, 140);
             this.marketBtn.TabIndex = 4;
             this.marketBtn.UseVisualStyleBackColor = true;
-            this.marketBtn.Click += new System.EventHandler(this.marketBtn_Click);
             // 
             // producaoBtn
             // 
@@ -75,7 +73,6 @@
             this.producaoBtn.Size = new System.Drawing.Size(359, 140);
             this.producaoBtn.TabIndex = 3;
             this.producaoBtn.UseVisualStyleBackColor = true;
-            this.producaoBtn.Click += new System.EventHandler(this.producaoBtn_Click);
             // 
             // nelsadaDataSet1
             // 
