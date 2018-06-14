@@ -15,7 +15,11 @@ namespace trabalho_base_dados
     public partial class Pessoal : Form
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         List<Cliente> clientes = new List<Cliente>();
+=======
+        List<ClienteMoradaContacto> clientes = new List<ClienteMoradaContacto>();
+>>>>>>> parent of cb7212f... ALMOST
         ClienteController cc = new ClienteController();
 =======
         List<ClienteMoradaContacto> clientes = new List<ClienteMoradaContacto>();
@@ -56,10 +60,11 @@ namespace trabalho_base_dados
         private void addBtn_Click(object sender, EventArgs e)
         {
             
-            clientes = cc.AddClient(
-                NomeTxtBox.Text,
-                Int32.Parse(NifTxtBox.Text),
-                DateTime.Now.Date);
+            //clientes = cc.AddClient(
+            //    NomeTxtBox.Text,
+            //    Int32.Parse(NifTxtBox.Text),
+            //    DateTime.Now.Date);
+            //clientes = 
             UpdateBindingCliente();
         }
         // ver
@@ -68,14 +73,19 @@ namespace trabalho_base_dados
             ClienteController cc = new ClienteController();
 
             //clientes = cc.GetClientes();
-            clientes = cc.GetClientes();
+            clientes = cc.GetClientesTotal();
             ClienteDataGridView.DataSource = clientes;
+<<<<<<< HEAD
 <<<<<<< HEAD
             ClienteDataGridView.Refresh();
 =======
            // ClienteDataGridView.DataBind
 
 >>>>>>> origin/nelionBlade
+=======
+            ClienteDataGridView.DataBind
+
+>>>>>>> parent of cb7212f... ALMOST
         }
 
         private void ElmBtn_Click(object sender, EventArgs e)
@@ -88,7 +98,7 @@ namespace trabalho_base_dados
                 {
                     int id;
                     int.TryParse(cell.Value.ToString(), out id);
-                    clientes = cc.DeleteCliente(id);
+                    //clientes = cc.DeleteCliente(id);
                 }
             }
             UpdateBindingCliente();

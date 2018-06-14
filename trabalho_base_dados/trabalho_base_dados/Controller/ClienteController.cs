@@ -34,14 +34,14 @@ namespace trabalho_base_dados.Controller
             }
         }
         // todos os clientes 3 tabelas
-        public List<Cliente> GetClientesTotal()
+        public List<ClienteMoradaContacto> GetClientesTotal()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConnectionValue("QuintaDaNelsada")))
             {
                 try
                 {
                     //var output = connection.Query<Cliente>("select * from Cliente").ToList();
-                    var output = connection.Query<Cliente>($"dbo.InfoCompletaCliente").ToList();
+                    var output = connection.Query<ClienteMoradaContacto>($"dbo.InfoCompletaCliente").ToList();
                     return output;
                 }
                 catch (Exception ex)
