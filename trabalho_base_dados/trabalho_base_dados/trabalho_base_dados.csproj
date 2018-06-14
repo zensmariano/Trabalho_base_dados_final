@@ -51,8 +51,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\FornecedorController.cs" />
+    <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\Helper.cs" />
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Fornecedor.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Views\AdicionarMorada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdicionarMorada.Designer.cs">
+      <DependentUpon>AdicionarMorada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Armazem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +80,24 @@
     </Compile>
     <Compile Include="Views\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NovoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NovoCliente.Designer.cs">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NovoFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NovoFornecedor.Designer.cs">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NovoFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NovoFuncionario.Designer.cs">
+      <DependentUpon>NovoFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Producao.cs">
       <SubType>Form</SubType>
@@ -108,6 +136,9 @@
     <Compile Include="Views\TipoContacto.Designer.cs">
       <DependentUpon>TipoContacto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AdicionarMorada.resx">
+      <DependentUpon>AdicionarMorada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Armazem.resx">
       <DependentUpon>Armazem.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +147,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NovoCliente.resx">
+      <DependentUpon>NovoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NovoFornecedor.resx">
+      <DependentUpon>NovoFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NovoFuncionario.resx">
+      <DependentUpon>NovoFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Producao.resx">
       <DependentUpon>Producao.cs</DependentUpon>
