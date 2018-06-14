@@ -34,28 +34,19 @@
             this.cLIENTEIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLIENTENOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLIENTENIFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.cLIENTEDATA1CONTACTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nelsadaDataSet = new trabalho_base_dados.nelsadaDataSet();
             this.clienteTableAdapter = new trabalho_base_dados.nelsadaDataSetTableAdapters.ClienteTableAdapter();
-            this.NomeLbl = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.NomeTxtBox = new System.Windows.Forms.TextBox();
             this.NifTxtBox = new System.Windows.Forms.TextBox();
             this.MoradaTxtBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.CPTxtBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.AltBtn = new System.Windows.Forms.Button();
             this.verBtn = new System.Windows.Forms.Button();
             this.ElmBtn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.RtrBtn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.TlfTxtBox = new System.Windows.Forms.TextBox();
-            this.telefLbl = new System.Windows.Forms.Label();
             this.tabFuncionario = new System.Windows.Forms.TabControl();
             this.ClientesTab = new System.Windows.Forms.TabPage();
             this.FuncionariosTab = new System.Windows.Forms.TabPage();
@@ -158,24 +149,6 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // NomeLbl
-            // 
-            this.NomeLbl.AutoSize = true;
-            this.NomeLbl.Location = new System.Drawing.Point(29, 261);
-            this.NomeLbl.Name = "NomeLbl";
-            this.NomeLbl.Size = new System.Drawing.Size(38, 13);
-            this.NomeLbl.TabIndex = 4;
-            this.NomeLbl.Text = "Nome:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 290);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Nif:";
-            // 
             // NomeTxtBox
             // 
             this.NomeTxtBox.Location = new System.Drawing.Point(90, 258);
@@ -198,15 +171,6 @@
             this.MoradaTxtBox.Size = new System.Drawing.Size(303, 20);
             this.MoradaTxtBox.TabIndex = 12;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 316);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Morada:";
-            // 
             // CPTxtBox
             // 
             this.CPTxtBox.Location = new System.Drawing.Point(90, 339);
@@ -214,18 +178,9 @@
             this.CPTxtBox.Size = new System.Drawing.Size(109, 20);
             this.CPTxtBox.TabIndex = 14;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 342);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Codigo Postal:";
-            // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(463, 312);
+            this.addBtn.Location = new System.Drawing.Point(463, 276);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(141, 23);
             this.addBtn.TabIndex = 15;
@@ -235,16 +190,17 @@
             // 
             // AltBtn
             // 
-            this.AltBtn.Location = new System.Drawing.Point(610, 287);
+            this.AltBtn.Location = new System.Drawing.Point(463, 247);
             this.AltBtn.Name = "AltBtn";
             this.AltBtn.Size = new System.Drawing.Size(141, 23);
             this.AltBtn.TabIndex = 16;
             this.AltBtn.Text = "Alterar";
             this.AltBtn.UseVisualStyleBackColor = true;
+            this.AltBtn.Click += new System.EventHandler(this.AltBtn_Click);
             // 
             // verBtn
             // 
-            this.verBtn.Location = new System.Drawing.Point(463, 287);
+            this.verBtn.Location = new System.Drawing.Point(610, 247);
             this.verBtn.Name = "verBtn";
             this.verBtn.Size = new System.Drawing.Size(141, 23);
             this.verBtn.TabIndex = 17;
@@ -254,7 +210,7 @@
             // 
             // ElmBtn
             // 
-            this.ElmBtn.Location = new System.Drawing.Point(610, 313);
+            this.ElmBtn.Location = new System.Drawing.Point(617, 276);
             this.ElmBtn.Name = "ElmBtn";
             this.ElmBtn.Size = new System.Drawing.Size(141, 23);
             this.ElmBtn.TabIndex = 18;
@@ -262,48 +218,12 @@
             this.ElmBtn.UseVisualStyleBackColor = true;
             this.ElmBtn.Click += new System.EventHandler(this.ElmBtn_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(463, 339);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // RtrBtn
-            // 
-            this.RtrBtn.Location = new System.Drawing.Point(610, 338);
-            this.RtrBtn.Name = "RtrBtn";
-            this.RtrBtn.Size = new System.Drawing.Size(141, 23);
-            this.RtrBtn.TabIndex = 20;
-            this.RtrBtn.Text = "Retroceder";
-            this.RtrBtn.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(442, 318);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 21;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // TlfTxtBox
             // 
             this.TlfTxtBox.Location = new System.Drawing.Point(272, 338);
             this.TlfTxtBox.Name = "TlfTxtBox";
             this.TlfTxtBox.Size = new System.Drawing.Size(121, 20);
             this.TlfTxtBox.TabIndex = 23;
-            // 
-            // telefLbl
-            // 
-            this.telefLbl.AutoSize = true;
-            this.telefLbl.Location = new System.Drawing.Point(214, 342);
-            this.telefLbl.Name = "telefLbl";
-            this.telefLbl.Size = new System.Drawing.Size(52, 13);
-            this.telefLbl.TabIndex = 22;
-            this.telefLbl.Text = "Telefone:";
             // 
             // tabFuncionario
             // 
@@ -321,21 +241,13 @@
             this.ClientesTab.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientesTab.Controls.Add(this.ClienteDataGridView);
             this.ClientesTab.Controls.Add(this.TlfTxtBox);
-            this.ClientesTab.Controls.Add(this.telefLbl);
-            this.ClientesTab.Controls.Add(this.NomeLbl);
-            this.ClientesTab.Controls.Add(this.checkBox1);
-            this.ClientesTab.Controls.Add(this.label5);
-            this.ClientesTab.Controls.Add(this.RtrBtn);
-            this.ClientesTab.Controls.Add(this.button5);
             this.ClientesTab.Controls.Add(this.NomeTxtBox);
             this.ClientesTab.Controls.Add(this.ElmBtn);
             this.ClientesTab.Controls.Add(this.NifTxtBox);
             this.ClientesTab.Controls.Add(this.verBtn);
-            this.ClientesTab.Controls.Add(this.label2);
             this.ClientesTab.Controls.Add(this.AltBtn);
             this.ClientesTab.Controls.Add(this.MoradaTxtBox);
             this.ClientesTab.Controls.Add(this.addBtn);
-            this.ClientesTab.Controls.Add(this.label6);
             this.ClientesTab.Controls.Add(this.CPTxtBox);
             this.ClientesTab.Location = new System.Drawing.Point(4, 22);
             this.ClientesTab.Name = "ClientesTab";
@@ -447,6 +359,7 @@
             this.button9.TabIndex = 35;
             this.button9.Text = "Eleminar";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox8
             // 
@@ -617,6 +530,7 @@
             this.button15.TabIndex = 51;
             this.button15.Text = "Eleminar";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // textBox13
             // 
@@ -717,23 +631,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTENOMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTENIFDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cLIENTEDATA1CONTACTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label NomeLbl;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox NomeTxtBox;
         private System.Windows.Forms.TextBox NifTxtBox;
         private System.Windows.Forms.TextBox MoradaTxtBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox CPTxtBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button AltBtn;
         private System.Windows.Forms.Button verBtn;
         private System.Windows.Forms.Button ElmBtn;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button RtrBtn;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox TlfTxtBox;
-        private System.Windows.Forms.Label telefLbl;
         private System.Windows.Forms.TabControl tabFuncionario;
         private System.Windows.Forms.TabPage ClientesTab;
         private System.Windows.Forms.TabPage FuncionariosTab;

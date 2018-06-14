@@ -16,6 +16,8 @@ namespace trabalho_base_dados
     {
         List<ClienteMoradaContacto> clientes = new List<ClienteMoradaContacto>();
         ClienteController cc = new ClienteController();
+        FuncionarioController cc = new FuncionarioController();
+        FornecedorController cc = new FornecedorController();
         public Pessoal()
         {
             InitializeComponent();
@@ -64,7 +66,7 @@ namespace trabalho_base_dados
             //clientes = cc.GetClientes();
             clientes = cc.GetClientesTotal();
             ClienteDataGridView.DataSource = clientes;
-            ClienteDataGridView.DataBind
+           // ClienteDataGridView.DataBind
 
         }
 
@@ -87,6 +89,43 @@ namespace trabalho_base_dados
         private void ClienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void AltBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FuncionarioController cc = new FuncionarioController();
+            //clientes = cc.DeleteCliente();   
+            foreach (DataGridViewCell cell in ClienteDataGridView.SelectedCells)
+            {
+                if (cell.OwningColumn.HeaderText.ToUpper() == "FUNCIONARIO_ID")
+                {
+                    int id;
+                    int.TryParse(cell.Value.ToString(), out id);
+                    //clientes = cc.DeleteCliente(id);
+                }
+            }
+            UpdateBindingCliente();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            FornecedorController cc = new FornecedorController();
+            //clientes = cc.DeleteCliente();   
+            foreach (DataGridViewCell cell in ClienteDataGridView.SelectedCells)
+            {
+                if (cell.OwningColumn.HeaderText.ToUpper() == "FORNECEDOR_ID")
+                {
+                    int id;
+                    int.TryParse(cell.Value.ToString(), out id);
+                    //clientes = cc.DeleteCliente(id);
+                }
+            }
+            UpdateBindingCliente();
         }
     }
 }
